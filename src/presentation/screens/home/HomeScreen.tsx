@@ -1,4 +1,4 @@
-import {View} from 'react-native';
+import {ScrollView} from 'react-native';
 import {useGlobalStyles} from '../../theme/useGlobalStyles';
 import {PrimaryButton} from '../../components/shared/PrimaryButton';
 import {useNavigation} from '@react-navigation/native';
@@ -11,7 +11,9 @@ export const HomeScreen: React.FC = () => {
   const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
 
   return (
-    <View style={globalStyles.container}>
+    <ScrollView
+      contentInsetAdjustmentBehavior="automatic"
+      style={globalStyles.container}>
       <PrimaryButton
         label="Testar Carousel"
         onPress={() => navigation.navigate('NewCarouselScreen')}
@@ -20,6 +22,6 @@ export const HomeScreen: React.FC = () => {
         username="@carlosxfelipe"
         projectUrl="https://github.com/carlosxfelipe/shell-app"
       />
-    </View>
+    </ScrollView>
   );
 };
