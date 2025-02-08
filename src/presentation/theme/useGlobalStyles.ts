@@ -13,6 +13,9 @@ export const useGlobalStyles = () => {
     background: {
       backgroundColor: currentTheme.background,
     },
+    text: {
+      color: currentTheme.text,
+    },
     container: {
       flex: 1,
       padding: 20,
