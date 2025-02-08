@@ -1,3 +1,4 @@
+import {Text, TouchableOpacity} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomeScreen} from '../screens/home/HomeScreen';
 import {CarouselScreen} from '../screens/carousel/CarouselScreen';
@@ -12,6 +13,12 @@ export type RootStackParams = {
 
 const Stack = createStackNavigator<RootStackParams>();
 
+const HeaderRight = () => (
+  <TouchableOpacity onPress={() => {}} style={{marginRight: 15}}>
+    <Text>@</Text>
+  </TouchableOpacity>
+);
+
 export const StackNavigator = () => {
   const globalStyles = useGlobalStyles();
 
@@ -19,12 +26,23 @@ export const StackNavigator = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: true,
+        headerBackTitle: 'Voltar',
+        headerBackTitleStyle: {
+          fontFamily: 'sans-serif-thin',
+          fontSize: 16,
+        },
         headerStyle: {
           elevation: 0,
           backgroundColor: globalStyles.background.backgroundColor,
           shadowColor: 'transparent',
         },
         headerTintColor: globalStyles.text.color,
+        headerTitleStyle: {
+          fontFamily: 'Zapfino',
+          fontSize: 18,
+          fontWeight: 'bold',
+        },
+        headerRight: HeaderRight,
       }}>
       <Stack.Screen
         name="Home"
