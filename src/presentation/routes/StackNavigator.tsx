@@ -26,9 +26,21 @@ export const StackNavigator = () => {
         },
         headerTintColor: globalStyles.text.color,
       }}>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen name="CarouselScreen" component={CarouselScreen} />
-      <Stack.Screen name="NewCarouselScreen" component={NewCarouselScreen} />
+      <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{title: 'Início'}}
+      />
+      <Stack.Screen
+        name="CarouselScreen"
+        component={CarouselScreen}
+        options={{title: 'Carousel'}}
+      />
+      <Stack.Screen
+        name="NewCarouselScreen"
+        component={NewCarouselScreen}
+        options={{title: 'Carousel'}}
+      />
     </Stack.Navigator>
   );
 };

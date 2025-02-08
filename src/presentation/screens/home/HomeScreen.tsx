@@ -1,14 +1,20 @@
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 import {useGlobalStyles} from '../../theme/useGlobalStyles';
 import {PrimaryButton} from '../../components/shared/PrimaryButton';
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
+import {RootStackParams} from '../../routes/StackNavigator';
 
 export const HomeScreen: React.FC = () => {
   const globalStyles = useGlobalStyles();
+  const navigation = useNavigation<StackNavigationProp<RootStackParams>>();
 
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.buttonText}>HomeScreen</Text>
-      <PrimaryButton label="Testar" onPress={() => {}} />
+      <PrimaryButton
+        label="Testar Carousel"
+        onPress={() => navigation.navigate('NewCarouselScreen')}
+      />
     </View>
   );
 };
