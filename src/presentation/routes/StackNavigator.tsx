@@ -1,4 +1,4 @@
-import {Platform, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {HomeScreen} from '../screens/home/HomeScreen';
 import {CarouselScreen} from '../screens/carousel/CarouselScreen';
@@ -27,22 +27,14 @@ export const StackNavigator = () => {
       screenOptions={{
         headerShown: true,
         headerBackTitle: 'Voltar',
-        headerBackTitleStyle: {
-          fontFamily:
-            Platform.OS === 'android' ? 'sans-serif-thin' : 'Helvetica-Light',
-          fontSize: 16,
-        },
+        headerBackTitleStyle: {},
         headerStyle: {
           elevation: 0,
           backgroundColor: globalStyles.background.backgroundColor,
           shadowColor: 'transparent',
         },
         headerTintColor: globalStyles.text.color,
-        headerTitleStyle: {
-          fontFamily: Platform.OS === 'ios' ? 'Zapfino' : 'sans-serif',
-          fontSize: 18,
-          fontWeight: 'bold',
-        },
+        headerTitleStyle: {},
         headerRight: HeaderRight,
       }}>
       <Stack.Screen
