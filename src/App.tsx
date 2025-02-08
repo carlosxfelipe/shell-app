@@ -7,7 +7,8 @@ import {
 } from 'react-native';
 
 import {useGlobalStyles} from './presentation/theme/useGlobalStyles';
-import {HomeScreen} from './presentation/screens/home/HomeScreen';
+// import {HomeScreen} from './presentation/screens/home/HomeScreen';
+import {CarouselScreen} from './presentation/screens/carousel/CarouselScreen';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -23,7 +24,8 @@ function App(): React.JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={globalStyles.background}>
         <View>
-          <HomeScreen />
+          {/* <HomeScreen /> */}
+          <CarouselScreen />
         </View>
       </ScrollView>
     </SafeAreaView>
