@@ -102,7 +102,9 @@ export const Carousel = ({
             ]}>
             <Image
               style={[styles.image, {width: imageWidth, height}]}
-              source={{uri: image.uri}}
+              source={
+                typeof image.uri === 'string' ? {uri: image.uri} : image.uri
+              }
             />
           </Pressable>
         ))}
