@@ -1,5 +1,5 @@
 import React from 'react';
-import {Alert, StyleSheet, Text, View} from 'react-native';
+import {Alert, Platform, StyleSheet, Text, View} from 'react-native';
 import {Carousel} from '../../components/Carousel';
 
 const images = [
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f4f4f4',
     padding: 10,
     borderRadius: 5,
-    fontFamily: 'Menlo',
+    fontFamily: Platform.OS === 'ios' ? 'Menlo' : 'monospace',
     fontSize: 16,
     marginTop: 10,
   },
