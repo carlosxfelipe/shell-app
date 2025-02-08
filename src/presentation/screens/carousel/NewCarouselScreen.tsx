@@ -17,7 +17,12 @@ export const NewCarouselScreen: React.FC = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View
+      style={{
+        backgroundColor: globalStyles.background.backgroundColor,
+        flex: 1,
+      }}>
+      <View style={{marginTop: 10}} />
       <Carousel
         images={images}
         // height={420}
@@ -30,7 +35,7 @@ export const NewCarouselScreen: React.FC = () => {
   images={images}
   // height={420}
   showIndicators
-  indicatorColor="purple"
+  indicatorColor="red"
   onPressImage={handlePressImage}
 />`}
       </Text>
@@ -39,9 +44,6 @@ export const NewCarouselScreen: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 30,
-  },
   codeText: {
     padding: 10,
     borderRadius: 5,
