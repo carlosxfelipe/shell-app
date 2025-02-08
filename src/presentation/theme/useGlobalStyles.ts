@@ -22,7 +22,7 @@ export const useGlobalStyles = () => {
       backgroundColor: currentTheme.background,
     },
     primaryButton: {
-      backgroundColor: currentTheme.warning,
+      backgroundColor: theme.dark.onBackground,
       borderRadius: 5,
       padding: 10,
       marginBottom: 10,
@@ -30,7 +30,7 @@ export const useGlobalStyles = () => {
       alignItems: 'center',
     },
     buttonText: {
-      color: currentTheme.text,
+      color: theme.light.onBackground,
       fontSize: 18,
     },
   });
