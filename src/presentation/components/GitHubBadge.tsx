@@ -6,6 +6,7 @@ import {
   Linking,
   TouchableOpacity,
   Platform,
+  useColorScheme,
 } from 'react-native';
 import GitHubIcon from './icons/GitHubIcon';
 import QRCode from 'react-native-qrcode-svg';
@@ -22,11 +23,14 @@ export const GitHubBadge: React.FC<GitHubBadgeProps> = ({
   projectUrl,
 }) => {
   const globalStyles = useGlobalStyles();
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const fill = isDarkMode ? theme.dark.text : theme.light.text;
 
   return (
     <View>
       <View style={styles.githubContainer}>
-        <GitHubIcon size={30} />
+        <GitHubIcon size={30} fill={fill} />
         <Text style={[styles.githubText, globalStyles.text]}>{username}</Text>
       </View>
       {projectUrl && (
