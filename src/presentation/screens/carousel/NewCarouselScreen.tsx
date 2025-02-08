@@ -22,7 +22,7 @@ export const NewCarouselScreen: React.FC = () => {
         backgroundColor: globalStyles.background.backgroundColor,
         flex: 1,
       }}>
-      <View style={{marginTop: 10}} />
+      <View style={{marginTop: 20}} />
       <Carousel
         images={images}
         // height={420}
@@ -45,10 +45,9 @@ export const NewCarouselScreen: React.FC = () => {
 
 const styles = StyleSheet.create({
   codeText: {
-    padding: 10,
+    padding: 20,
     borderRadius: 5,
     fontFamily: 'Menlo',
     fontSize: 16,
-    marginTop: 10,
   },
 });
