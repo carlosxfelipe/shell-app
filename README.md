@@ -2,6 +2,10 @@
 
 Este é um projeto **React Native CLI** desenvolvido para testar a criação de componentes.
 
+<p align="center">
+  <img src="./327shots_so.png" alt="Preview do Projeto" />
+</p>
+
 ## Passos para rodar o projeto
 
 1. **Clone o repositório**
