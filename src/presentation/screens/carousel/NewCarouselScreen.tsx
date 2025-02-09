@@ -4,9 +4,12 @@ import {Carousel} from '../../components/Carousel';
 import {useGlobalStyles} from '../../theme/useGlobalStyles';
 
 const images = [
-  {id: 1, uri: require('../../../../assets/images/about-us-banner.png')},
-  {id: 2, uri: require('../../../../assets/images/contact-banner.png')},
-  {id: 3, uri: require('../../../../assets/images/place-an-order-banner.png')},
+  {id: 1, uri: require('../../../../assets/images/bird-1905255_640.jpg')},
+  {id: 2, uri: require('../../../../assets/images/bird-7534030_640.jpg')},
+  {id: 3, uri: require('../../../../assets/images/deer-7453413_640.jpg')},
+  {id: 4, uri: require('../../../../assets/images/forest-6631518_640.jpg')},
+  {id: 5, uri: require('../../../../assets/images/frog-9335937_640.jpg')},
+  {id: 6, uri: require('../../../../assets/images/sunrise-7493833_640.jpg')},
 ];
 
 export const NewCarouselScreen: React.FC = () => {
@@ -27,7 +30,7 @@ export const NewCarouselScreen: React.FC = () => {
         images={images}
         // height={420}
         showIndicators
-        indicatorColor="red"
+        indicatorColor="green"
         onPressImage={handlePressImage}
       />
       <Text style={[globalStyles.text, styles.codeText]}>
@@ -35,7 +38,7 @@ export const NewCarouselScreen: React.FC = () => {
   images={images}
   // height={420}
   showIndicators
-  indicatorColor="red"
+  indicatorColor="green"
   onPressImage={handlePressImage}
 />`}
       </Text>
