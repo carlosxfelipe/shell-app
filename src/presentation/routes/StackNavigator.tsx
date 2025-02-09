@@ -1,9 +1,11 @@
-import {Text, TouchableOpacity} from 'react-native';
+import {TouchableOpacity, useColorScheme} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
+import Icon from '@react-native-vector-icons/fontawesome6';
+import {theme} from '../theme/theme';
+import {useGlobalStyles} from '../theme/useGlobalStyles';
 import {HomeScreen} from '../screens/home/HomeScreen';
 import {CarouselScreen} from '../screens/carousel/CarouselScreen';
 import {NewCarouselScreen} from '../screens/carousel/NewCarouselScreen';
-import {useGlobalStyles} from '../theme/useGlobalStyles';
 
 export type RootStackParams = {
   Home: undefined;
@@ -13,11 +15,16 @@ export type RootStackParams = {
 
 const Stack = createStackNavigator<RootStackParams>();
 
-const HeaderRight = () => (
-  <TouchableOpacity onPress={() => {}} style={{marginRight: 15}}>
-    <Text>@</Text>
-  </TouchableOpacity>
-);
+const HeaderRight = () => {
+  const isDarkMode = useColorScheme() === 'dark';
+  const color = isDarkMode ? theme.dark.text : theme.light.text;
+
+  return (
+    <TouchableOpacity onPress={() => {}} style={{marginRight: 15}}>
+      <Icon name="code" size={22} color={color} iconStyle="solid" />
+    </TouchableOpacity>
+  );
+};
 
 export const StackNavigator = () => {
   const globalStyles = useGlobalStyles();
