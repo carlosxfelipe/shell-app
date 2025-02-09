@@ -1,5 +1,13 @@
 import React, {useRef, useEffect, useMemo} from 'react';
-import {View, Modal, Animated, StyleSheet, Easing} from 'react-native';
+import {
+  View,
+  Modal,
+  Animated,
+  StyleSheet,
+  Easing,
+  Text,
+  Platform,
+} from 'react-native';
 import Svg, {Path, Defs, ClipPath, Rect, G, Circle} from 'react-native-svg';
 
 const SVG_WIDTH = 300;
@@ -143,6 +151,19 @@ export const SplashScreen: React.FC<Props> = ({visible, onClose}) => {
             />
           ))}
         </Svg>
+
+        <Text
+          style={{
+            color: 'whitesmoke',
+            fontSize: 18,
+            fontWeight: '600',
+            fontFamily: Platform.select({
+              ios: 'Avenir',
+              android: 'sans-serif',
+            }),
+          }}>
+          Utilizando apenas react-native-svg
+        </Text>
       </View>
     </Modal>
   );
